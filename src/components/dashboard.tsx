@@ -3,6 +3,7 @@ import { AboutPanel } from "@/components/about-panel";
 import { InstallPanel } from "@/components/install-panel";
 import { MarketSection } from "@/components/market-section";
 import { ResourceColumns } from "@/components/resource-columns";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StatGrid } from "@/components/stat-grid";
 import { getBitcoinSnapshot, type BitcoinSnapshot } from "@/lib/bitcoin";
@@ -67,10 +68,7 @@ export function Dashboard({ initial }: { initial: BitcoinSnapshot | null }) {
           <InstallPanel />
           <ResourceColumns />
         </main>
-        <footer className="relative mx-auto max-w-6xl px-4 py-10 text-xs text-subtle sm:px-6">
-          Live figures via Coinbase, Kraken, blockchain.info, Blockstream, and btcnodes.io —
-          the same set Clark Moody publishes. Not financial advice.
-        </footer>
+        <SiteFooter />
       </div>
     </div>
   );
