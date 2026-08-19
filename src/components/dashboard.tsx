@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AboutPanel } from "@/components/about-panel";
-import { AlertsPanel } from "@/components/alerts-panel";
+import { InstallPanel } from "@/components/install-panel";
 import { MarketSection } from "@/components/market-section";
 import { ResourceColumns } from "@/components/resource-columns";
 import { SiteHeader } from "@/components/site-header";
@@ -64,7 +64,7 @@ export function Dashboard({ initial }: { initial: BitcoinSnapshot | null }) {
           ) : null}
           <MarketSection snapshot={snapshot} />
           <StatGrid snapshot={snapshot} />
-          <AlertsPanel snapshot={snapshot} />
+          <InstallPanel />
           <ResourceColumns />
         </main>
         <footer className="relative mx-auto max-w-6xl px-4 py-10 text-xs text-subtle sm:px-6">
