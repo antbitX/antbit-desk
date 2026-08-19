@@ -1,9 +1,3 @@
-import { Link } from "@tanstack/react-router";
-import { SignedIn, SignedOut, UserButton } from "@/lib/auth/gates";
-import { useCurrentUserState } from "@/lib/auth/use-current-user";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-
 const NAV = [
   { href: "#about", label: "About" },
   { href: "#markets", label: "Markets" },
@@ -12,8 +6,6 @@ const NAV = [
 ];
 
 export function SiteHeader() {
-  const { user, isPending } = useCurrentUserState();
-
   return (
     <header className="sticky top-0 z-30 border-b border-border/80 bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -40,22 +32,6 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-
-        <div className="flex min-w-24 justify-end">
-          {isPending ? (
-            <Skeleton className="h-8 w-24 rounded-full" />
-          ) : user ? (
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          ) : (
-            <SignedOut>
-              <Button asChild size="sm">
-                <Link to="/login">Sign in</Link>
-              </Button>
-            </SignedOut>
-          )}
-        </div>
       </div>
     </header>
   );
