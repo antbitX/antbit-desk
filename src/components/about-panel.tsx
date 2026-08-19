@@ -17,6 +17,9 @@ export function AboutPanel() {
                 src="/avatar.jpg"
                 alt="antbit avatar — Antoninus Pius gold denarius"
                 className="size-24 shrink-0 rounded-full object-cover outline outline-1 -outline-offset-1 outline-coin/50 sm:size-28"
+                onError={(event) => {
+                  event.currentTarget.src = "/avatar.svg";
+                }}
               />
               <div className="min-w-0 space-y-3">
                 <div className="flex flex-wrap items-center gap-3">

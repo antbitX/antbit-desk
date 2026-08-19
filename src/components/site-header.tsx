@@ -22,6 +22,9 @@ export function SiteHeader() {
             src="/avatar.jpg"
             alt=""
             className="size-8 rounded-full object-cover outline outline-1 -outline-offset-1 outline-coin/40"
+            onError={(event) => {
+              event.currentTarget.src = "/avatar.svg";
+            }}
           />
           <span className="font-display text-sm tracking-[0.18em] uppercase">antbit</span>
         </a>

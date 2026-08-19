@@ -34,14 +34,13 @@ export function Dashboard({ initial }: { initial: BitcoinSnapshot | null }) {
       cancelled = true;
       window.clearInterval(id);
     };
-    // snapshot intentionally omitted — only used as a stale-data guard
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initial]);
 
   return (
     <div className="relative min-h-screen text-fg">
       <div
-        className="pointer-events-none fixed inset-0 bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat"
+        className="pointer-events-none fixed inset-0 bg-[url('/banner.jpg'),url('/banner.svg')] bg-cover bg-center bg-no-repeat"
         aria-hidden="true"
       />
       <div
