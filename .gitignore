@@ -1,0 +1,14 @@
+node_modules
+.vercel
+dist
+.output
+*.log
+.DS_Store
+.env
+.env.*
+screenshots
+artifacts
+AGENTS.md
+AGENTS.project.md
+.grok
+antbit-desk.zip
