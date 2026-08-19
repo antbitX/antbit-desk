@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #050505;
+  --color-surface: #101010;
+  --color-surface-2: #181818;
+  --color-fg: #f3efe6;
+  --color-muted: #8d877c;
+  --color-subtle: #5c5850;
+  --color-accent: #3db4ff;
+  --color-accent-deep: #1a73c7;
+  --color-tab: #2b86f3;
+  --color-tab-fg: #f7fbff;
+  --color-coin: #c4a46a;
+  --color-border: #2a2824;
+  --color-up: #3dcf8e;
+  --color-down: #ef5b5b;
+  --color-ring: #3db4ff;
+
+  --font-display: "Cinzel", "Times New Roman", serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px rgba(243, 239, 230, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(61, 180, 255, 0.35);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
