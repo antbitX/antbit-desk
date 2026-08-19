@@ -1,3 +1,4 @@
+import { NewsFeed } from "@/components/news-feed";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { XIcon } from "@/components/x-icon";
 
@@ -7,7 +8,7 @@ export function AboutPanel() {
       <Tabs defaultValue="profile">
         <TabsList>
           <TabsTrigger value="profile">Profile</TabsTrigger>
-          <TabsTrigger value="stack">Stack</TabsTrigger>
+          <TabsTrigger value="news">News</TabsTrigger>
         </TabsList>
 
         <TabsContent value="profile">
@@ -57,29 +58,8 @@ export function AboutPanel() {
           </article>
         </TabsContent>
 
-        <TabsContent value="stack">
-          <article className="rounded-xl bg-surface/90 p-6 shadow-[var(--shadow-border)] sm:p-8">
-            <ul className="grid gap-4 sm:grid-cols-3">
-              <li>
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
-                  Hardware
-                </p>
-                <p className="mt-1 text-fg">SeedSigner</p>
-              </li>
-              <li>
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
-                  Desktop
-                </p>
-                <p className="mt-1 text-fg">Sparrow Wallet</p>
-              </li>
-              <li>
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
-                  Consensus
-                </p>
-                <p className="mt-1 text-fg">BIP-110 / RDTS</p>
-              </li>
-            </ul>
-          </article>
+        <TabsContent value="news">
+          <NewsFeed />
         </TabsContent>
       </Tabs>
     </section>
