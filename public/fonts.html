@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>antbit — heading font options</title>
+  <link rel="icon" href="/favicon-32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@600&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Marcellus&family=Syne:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #050505;
+      color: #f3efe6;
+      font-family: "DM Sans", system-ui, sans-serif;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px 64px; }
+    a.back { color: #3db4ff; text-decoration: none; font-size: 14px; }
+    a.back:hover { text-decoration: underline; }
+    .kicker {
+      margin: 24px 0 8px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8d877c;
+    }
+    h1.page { margin: 0 0 8px; font-size: 28px; font-weight: 500; }
+    .lede { margin: 0 0 28px; color: #8d877c; font-size: 14px; line-height: 1.5; max-width: 40rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 800px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: #101010;
+      box-shadow: 0 0 0 1px rgba(243, 239, 230, 0.08);
+      border-radius: 16px;
+      padding: 28px 24px 24px;
+    }
+    .name {
+      margin: 0 0 16px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c4a46a;
+    }
+    .hero { margin: 0; font-size: clamp(40px, 7vw, 56px); line-height: 1; font-weight: 500; }
+    .line { margin: 14px 0 0; font-size: clamp(22px, 3.4vw, 28px); line-height: 1.2; font-weight: 500; }
+    .nav { margin: 16px 0 0; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: #8d877c; }
+    .cinzel { font-family: "Cinzel", serif; }
+    .marcellus { font-family: "Marcellus", serif; }
+    .cormorant { font-family: "Cormorant Garamond", serif; font-weight: 600; }
+    .syne { font-family: "Syne", sans-serif; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">← back to the desk</a>
+    <p class="kicker">Type samples</p>
+    <h1 class="page">Heading font options</h1>
+    <p class="lede">
+      The live desk is still Cinzel. These four cards are only a comparison — same three lines in each face.
+      Pick a number and I’ll swap it on the site.
+    </p>
+    <div class="grid">
+      <div class="card cinzel">
+        <p class="name">1 · Cinzel — current</p>
+        <p class="hero">antbit</p>
+        <p class="line">Price & live tape</p>
+        <p class="line">Six live Bitcoin stats</p>
+        <p class="nav">antbit</p>
+      </div>
+      <div class="card marcellus">
+        <p class="name">2 · Marcellus</p>
+        <p class="hero">antbit</p>
+        <p class="line">Price & live tape</p>
+        <p class="line">Six live Bitcoin stats</p>
+        <p class="nav">antbit</p>
+      </div>
+      <div class="card cormorant">
+        <p class="name">3 · Cormorant Garamond</p>
+        <p class="hero">antbit</p>
+        <p class="line">Price & live tape</p>
+        <p class="line">Six live Bitcoin stats</p>
+        <p class="nav">antbit</p>
+      </div>
+      <div class="card syne">
+        <p class="name">4 · Syne</p>
+        <p class="hero">antbit</p>
+        <p class="line">Price & live tape</p>
+        <p class="line">Six live Bitcoin stats</p>
+        <p class="nav">antbit</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
