@@ -33,7 +33,8 @@ export function MarketSection({ snapshot }: { snapshot: BitcoinSnapshot | null }
     };
   }, [range]);
 
-  const up = (snapshot?.change24hPct ?? 0) >= 0;
+  const rangePct = changeOverRange(points, snapshot?.price, snapshot?.change24hPct ?? 0);
+  const up = rangePct >= 0;
 
   return (
     <section id="markets" className="scroll-mt-24 space-y-4">
@@ -69,7 +70,8 @@ export function MarketSection({ snapshot }: { snapshot: BitcoinSnapshot | null }
                         up ? "text-up" : "text-down",
                       )}
                     >
-                      {formatPct(snapshot.change24hPct)}
+                      {formatPct(rangePct)}
+                      <span className="ml-1.5 text-muted">{range}</span>
                     </p>
                   </div>
                 ) : (
@@ -131,6 +133,18 @@ export function MarketSection({ snapshot }: { snapshot: BitcoinSnapshot | null }
       </div>
     </section>
   );
+}
+
+function changeOverRange(
+  points: ChartPoint[] | null,
+  spot: number | undefined,
+  fallback: number,
+): number {
+  if (!points || points.length < 2) return fallback;
+  const start = points[0]?.price;
+  const end = spot ?? points[points.length - 1]?.price;
+  if (!start || !end) return fallback;
+  return ((end - start) / start) * 100;
 }
 
 function StatRow({
