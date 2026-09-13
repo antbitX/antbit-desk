@@ -5,6 +5,7 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "antbit";
 const TAB_TITLE = "antbit - bitcoin only";
+const ICON_V = "eagle";
 const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
 const ogImage = host ? `https://${host}/og.jpg` : undefined;
 const xBanner = host
@@ -43,10 +44,11 @@ export const Route = createRootRoute({
         : []),
     ],
     links: [
-      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
-      { rel: "icon", type: "image/png", sizes: "48x48", href: "/favicon-48.png" },
-      { rel: "icon", href: "/favicon.ico" },
-      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: `/favicon-32.png?v=${ICON_V}` },
+      { rel: "icon", type: "image/png", sizes: "48x48", href: `/favicon-48.png?v=${ICON_V}` },
+      { rel: "icon", type: "image/x-icon", href: `/favicon.ico?v=${ICON_V}` },
+      { rel: "shortcut icon", href: `/favicon.ico?v=${ICON_V}` },
+      { rel: "apple-touch-icon", href: `/apple-touch-icon.png?v=${ICON_V}` },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "stylesheet", href: appCss },
     ],
