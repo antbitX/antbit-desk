@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { AboutPanel } from "@/components/about-panel";
 import { InstallPanel } from "@/components/install-panel";
 import { MarketSection } from "@/components/market-section";
@@ -7,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StatGrid } from "@/components/stat-grid";
 import { getBitcoinSnapshot, type BitcoinSnapshot } from "@/lib/bitcoin";
+import { useEffect, useState } from "react";
 
 export function Dashboard({ initial }: { initial: BitcoinSnapshot | null }) {
   const [snapshot, setSnapshot] = useState<BitcoinSnapshot | null>(initial);
@@ -36,21 +36,22 @@ export function Dashboard({ initial }: { initial: BitcoinSnapshot | null }) {
       cancelled = true;
       window.clearInterval(id);
     };
+    // snapshot intentionally omitted — only used as a stale-data guard
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initial]);
 
   return (
     <div className="relative min-h-screen text-fg">
       <div
-        className="pointer-events-none fixed inset-0 bg-[url('/banner.jpg'),url('/banner.svg')] bg-cover bg-center bg-no-repeat"
+        className="pointer-events-none fixed inset-0 bg-[url('/banner.jpg')] bg-cover bg-[position:72%_center] bg-no-repeat"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none fixed inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,color-mix(in_oklab,var(--color-bg)_88%,transparent)_42%,color-mix(in_oklab,var(--color-bg)_55%,transparent)_100%)]"
+        className="pointer-events-none fixed inset-0 bg-[linear-gradient(90deg,color-mix(in_oklab,var(--color-bg)_92%,transparent)_0%,color-mix(in_oklab,var(--color-bg)_78%,transparent)_36%,color-mix(in_oklab,var(--color-bg)_38%,transparent)_100%)]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none fixed inset-0 bg-[linear-gradient(180deg,color-mix(in_oklab,var(--color-bg)_35%,transparent)_0%,transparent_28%,color-mix(in_oklab,var(--color-bg)_70%,transparent)_100%)]"
+        className="pointer-events-none fixed inset-0 bg-[linear-gradient(180deg,color-mix(in_oklab,var(--color-bg)_48%,transparent)_0%,transparent_26%,color-mix(in_oklab,var(--color-bg)_74%,transparent)_100%)]"
         aria-hidden="true"
       />
 
