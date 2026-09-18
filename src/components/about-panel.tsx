@@ -16,7 +16,7 @@ export function AboutPanel() {
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <img
                 src="/avatar.jpg"
-                alt="antbit — astronaut on eagle"
+                alt="antbit astronaut"
                 className="size-24 shrink-0 rounded-full object-cover outline outline-1 -outline-offset-1 outline-accent/50 sm:size-28"
               />
               <div className="min-w-0 space-y-3">

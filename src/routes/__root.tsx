@@ -5,7 +5,7 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "antbit";
 const TAB_TITLE = "antbit - bitcoin only";
-const ICON_V = "eagle";
+const ICON_V = "helm";
 const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
 const ogImage = host ? `https://${host}/og.jpg` : undefined;
 const xBanner = host
